@@ -1,1 +1,12 @@
-<p>user-list works!</p>
+<!-- src/app/user-list/user-list.component.html -->
+<div class="user-list">
+    <div *ngFor="let user of users" class="user-card">
+      <img [src]="user.avatar" alt="{{ user.first_name }}">
+      <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+    </div>
+    <div class="pagination">
+      <button (click)="previousPage()" [disabled]="page === 1">Previous</button>
+      <button (click)="nextPage()">Next</button>
+    </div>
+  </div>
+  

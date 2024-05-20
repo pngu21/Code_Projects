@@ -1,0 +1,8 @@
+/* src/app/header/header.component.css */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  

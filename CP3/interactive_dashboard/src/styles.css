@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
