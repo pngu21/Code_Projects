@@ -1,0 +1,14 @@
+div {
+    text-align: center;
+  }
+  
+  img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+  }

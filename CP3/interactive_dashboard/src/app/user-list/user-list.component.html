@@ -1,6 +1,7 @@
 <!-- src/app/user-list/user-list.component.html -->
+<div *ngIf="isLoading" class="loading-bar">Loading...</div>
 <div class="user-list">
-    <div *ngFor="let user of users" class="user-card">
+    <div *ngFor="let user of users" class="user-card" (click)="viewUser(user.id)">
       <img [src]="user.avatar" alt="{{ user.first_name }}">
       <h2>{{ user.first_name }} {{ user.last_name }}</h2>
     </div>
@@ -8,5 +9,6 @@
       <button (click)="previousPage()" [disabled]="page === 1">Previous</button>
       <button (click)="nextPage()">Next</button>
     </div>
-  </div>
+</div>
+<!-- <pagination-controls (pageChange)="loadUsers($event)"></pagination-controls> -->
   
