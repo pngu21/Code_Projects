@@ -1,1 +1,16 @@
-<p>user-details works!</p>
+<!-- src/app/components/user-details/user-details.component.html -->
+<div *ngIf="userDetails$ | async as user; else loading">
+    <mat-card>
+      <img mat-card-avatar [src]="user.avatar" alt="{{user.first_name}}">
+      <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+      <mat-card-content>
+        <p>Email: {{ user.email }}</p>
+        <!-- Add more details as needed -->
+      </mat-card-content>
+      <button mat-button (click)="onBack()">Back</button>
+    </mat-card>
+  </div>
+  <ng-template #loading>
+    <mat-spinner></mat-spinner>
+  </ng-template>
+  

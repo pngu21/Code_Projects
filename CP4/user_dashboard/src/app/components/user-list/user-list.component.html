@@ -1,1 +1,11 @@
-<p>user-list works!</p>
+<!-- src/app/components/user-list/user-list.component.html -->
+<div class="user-list">
+    <mat-progress-bar *ngIf="loading$ | async" mode="indeterminate"></mat-progress-bar>
+    <mat-card *ngFor="let user of users$ | async" (click)="onUserClick(user.id)" class="user-card">
+      <img mat-card-avatar [src]="user.avatar" alt="{{user.first_name}}">
+      <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+    </mat-card>
+    <mat-paginator [length]="total$ | async" [pageSize]="6" (page)="onPageChange($event.pageIndex + 1)">
+    </mat-paginator>
+  </div>
+  
