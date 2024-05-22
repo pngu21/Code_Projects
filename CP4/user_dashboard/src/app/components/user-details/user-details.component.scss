@@ -1,0 +1,11 @@
+// src/app/components/user-details/user-details.component.scss
+mat-card {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    img {
+      max-width: 100px;
+      border-radius: 50%;
+    }
+  }
+  
