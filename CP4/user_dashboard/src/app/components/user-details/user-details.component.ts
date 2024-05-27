@@ -6,9 +6,16 @@ import { Observable } from 'rxjs';
 import { UserDetails } from '../../models/user.model';
 import { loadUserDetails } from '../../store/user/user.actions';
 import { selectUserDetails, selectLoading } from '../../store/user/user.selectors';
+import { CommonModule } from '@angular/common';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardContent } from '@angular/material/card';
+import { MatCardTitle } from '@angular/material/card';
+import { MatCard } from '@angular/material/card';
 
 @Component({
   selector: 'app-user-details',
+  standalone: true,
+  imports: [CommonModule, MatProgressSpinnerModule, MatCardContent,MatCardTitle,MatCard ],
   templateUrl: './user-details.component.html',
   styleUrls: ['./user-details.component.scss']
 })

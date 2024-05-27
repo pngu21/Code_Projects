@@ -4,18 +4,31 @@
      Content 
   </div> -->
 
-<div *ngIf="userDetails$ | async as user; else loading">
-    <mat-card>
+<div @fadeIn *ngIf="userDetails$ | async as user; else loading">
+    <mat-card *ngIf="user">
       <img mat-card-avatar [src]="user.avatar" alt="{{user.first_name}}">
       <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
       <mat-card-content>
         <p>Email: {{ user.email }}</p>
-        <!-- Add more details as needed -->
+        //Add more details as needed
       </mat-card-content>
       <button mat-button (click)="onBack()">Back</button>
     </mat-card>
   </div>
   <ng-template #loading>
-    <mat-spinner></mat-spinner>
+    <mat-spinner *ngIf="loading"></mat-spinner>
   </ng-template>
+
+  <!-- <div class="user-details-container">
+    <mat-card *ngIf="user">
+      <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+      <mat-card-content>
+        <div>
+          <img [src]="user.avatar" alt="{{ user.first_name }}'s avatar">
+        </div>
+        <p>Email: {{ user.email }}</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-spinner *ngIf="loading"></mat-spinner>
+  </div> -->
   
