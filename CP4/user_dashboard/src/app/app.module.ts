@@ -27,6 +27,9 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { LoadingDirective } from './directives/loading.directive';
 
+import { userReducer } from '../app/store/user/user.reducer'
+import { StateObservable, Store } from '@ngrx/store';
+
 
 
 @NgModule({
@@ -50,9 +53,9 @@ import { LoadingDirective } from './directives/loading.directive';
     FormsModule,
     CommonModule,
     routes,
-    StoreModule.forRoot({}),
+    StoreModule.forRoot(userReducer, {}),
     EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({ maxAge: 25 }),
+    StoreDevtoolsModule.instrument({ maxAge: 25}),
     UserStoreModule,
     LoadingDirective,
     MatToolbarModule,
@@ -75,7 +78,7 @@ import { LoadingDirective } from './directives/loading.directive';
   //   MatPaginatorModule,
   // ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [{ provide: StateObservable, useFactory: (store: Store) => store.select(state => state), deps: [Store] }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

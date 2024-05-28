@@ -3,6 +3,8 @@ import { createReducer, on } from '@ngrx/store';
 import * as UserActions from './user.actions';
 // import { User, UserDetails } from 'src/app/models/user.model';
 import { User, UserDetails } from '../../models/user.model';
+import {ActionReducerMap,MetaReducer} from '@ngrx/store';
+
 
 export interface State {
   users: User[];

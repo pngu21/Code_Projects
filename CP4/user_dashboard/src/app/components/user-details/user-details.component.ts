@@ -17,7 +17,8 @@ import { MatCard } from '@angular/material/card';
   standalone: true,
   imports: [CommonModule, MatProgressSpinnerModule, MatCardContent,MatCardTitle,MatCard ],
   templateUrl: './user-details.component.html',
-  styleUrls: ['./user-details.component.scss']
+  styleUrls: ['./user-details.component.scss'],
+  providers: [Store]
 })
 export class UserDetailsComponent implements OnInit {
   userDetails$: Observable<UserDetails | null>;
