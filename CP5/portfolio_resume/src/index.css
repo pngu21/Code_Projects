@@ -11,3 +11,79 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header-container {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.footer-container {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex: 1;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  cursor: pointer;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-full {
+  width: 100%;
+  padding: 20px;
+}
+
+.intro-container, .work-container, .projects-container, .education-container, .achievements-container, .contact-container {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .intro-container, .work-container, .projects-container, .education-container, .achievements-container, .contact-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-container, .work-container, .projects-container, .education-container, .achievements-container, .contact-container {
+    padding: 5px;
+    font-size: 0.9em;
+  }
+}

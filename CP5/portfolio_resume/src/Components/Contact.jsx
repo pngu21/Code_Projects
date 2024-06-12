@@ -1,17 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import '../index.css';
+// import styled from 'styled-components';
 
-const ContactContainer = styled.section`
-  padding: 20px;
-  text-align: center;
-`;
+// const ContactContainer = styled.section`
+//   padding: 20px;
+//   text-align: center;
+// `;
 
 const Contact = () => (
-  <ContactContainer>
+  <section className="contact-container">
     <h2>Contact</h2>
     <p>Email: designer@example.com</p>
     <p>Phone: 123-456-7890</p>
-  </ContactContainer>
+  </section>
 );
 
 export default Contact;

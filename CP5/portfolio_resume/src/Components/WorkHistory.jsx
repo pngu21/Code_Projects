@@ -1,18 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const WorkContainer = styled.section`
-  padding: 20px;
-`;
+import '../index.css';
+// import styled from 'styled-components';
+// const WorkContainer = styled.section`
+//   padding: 20px;
+// `;
 
 const WorkHistory = () => (
-  <WorkContainer>
+  <section className="work-container">
     <h2>Work History</h2>
     <ul>
       <li>Company A - Software Designer (2020 - Present)</li>
       <li>Company B - Frontend Developer (2018 - 2020)</li>
     </ul>
-  </WorkContainer>
+  </section>
 );
 
 export default WorkHistory;

@@ -1,16 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const IntroContainer = styled.section`
-  padding: 20px;
-  text-align: center;
-`;
+import '../index.css';
+// import styled from 'styled-components';
+// const IntroContainer = styled.section`
+//   padding: 20px;
+//   text-align: center;
+// `;
 
 const Introduction = () => (
-  <IntroContainer>
+  <section className="intro-container">
     <h2>About Me</h2>
     <p>Hello! I am a software designer with a passion for creating elegant and efficient solutions...</p>
-  </IntroContainer>
+  </section>
 );
 
 export default Introduction;

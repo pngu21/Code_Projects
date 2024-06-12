@@ -1,18 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const ProjectsContainer = styled.section`
-  padding: 20px;
-`;
+import '../index.css';
+// import styled from 'styled-components';
+// const ProjectsContainer = styled.section`
+//   padding: 20px;
+// `;
 
 const Projects = () => (
-  <ProjectsContainer>
+  <section className="projects-container">
     <h2>Projects</h2>
     <ul>
       <li>Project X - Description of project X</li>
       <li>Project Y - Description of project Y</li>
     </ul>
-  </ProjectsContainer>
+  </section>
 );
 
 export default Projects;
