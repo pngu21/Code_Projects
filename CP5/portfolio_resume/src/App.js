@@ -84,6 +84,7 @@ const Home = () => (
 const ConditionalNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
