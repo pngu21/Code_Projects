@@ -9,8 +9,10 @@ const WorkHistory = () => (
   <section className="work-container">
     <h2>Work History</h2>
     <ul>
-      <li>Company A - Software Designer (2020 - Present)</li>
-      <li>Company B - Frontend Developer (2018 - 2020)</li>
+      <li>Core Group - Service Desk Analyst (2022 - Present)</li>
+      <li>The App Lab - Frontend Developer (2019 - 2022)</li>
+      <li>Keystone electronic solutions - Backend Developer (2019 - 2019)</li>
+      <li>iStore - Support Desk Technician (2018 - 2019)</li>
     </ul>
   </section>
 );

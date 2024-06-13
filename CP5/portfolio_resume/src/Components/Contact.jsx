@@ -10,8 +10,9 @@ import '../index.css';
 const Contact = () => (
   <section className="contact-container">
     <h2>Contact</h2>
-    <p>Email: designer@example.com</p>
-    <p>Phone: 123-456-7890</p>
+    <p>Email: philangubentombi@gmail.com</p>
+    <p>Phone: +27630249334</p>
+    <p>GIT: https://github.com/pngu21</p>
   </section>
 );
 

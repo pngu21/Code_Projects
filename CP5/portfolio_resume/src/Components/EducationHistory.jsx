@@ -10,8 +10,8 @@ const EducationHistory = () => (
   <section className="education-container">
     <h2>Education History</h2>
     <ul>
-      <li>University A - Degree (2014 - 2018)</li>
-      <li>College B - Diploma (2012 - 2014)</li>
+      <li>Monash University - Bachelor of Computer and Information Sciences (2015 - 2019)</li>
+      <li>Monash University - Higher Certificate in Information Technology (2014 - 2015)</li>
     </ul>
   </section>
 );

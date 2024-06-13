@@ -10,8 +10,10 @@ const Achievements = () => (
   <section className="achievements-container">
     <h2>Achievements</h2>
     <ul>
-      <li>Award X - Description of award</li>
-      <li>Award Y - Description of award</li>
+      <li>ITIL Foundation Certificate in IT Service Management</li>
+      <li>Jamf Certified Associate - Jamf Pro</li>
+      <li>Business Analyst Certification</li>
+      <li>Apple Certified Support Professional Certification</li>
     </ul>
   </section>
 );
