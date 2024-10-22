@@ -15,11 +15,11 @@ import '../index.css';
 const Footer = () => (
   <footer className="footer-container">
     <p>&copy; 2024 Software Designer Portfolio</p>
-    <div className="more-details">
+    {/* <div className="more-details">
       <p>Email: philangubentombi@gmail.com</p>
       <p>Phone: +27630249334</p>
       <p>GIT: https://github.com/pngu21</p>
-    </div>
+    </div> */}
   </footer>
 );
 
