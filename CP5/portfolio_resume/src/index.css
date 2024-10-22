@@ -20,12 +20,16 @@ code {
   text-align: center;
 }
 
+/* .contact-container{
+  padding: 2px;
+} */
+
 .footer-container {
   background-color: #282c34;
-  padding: 10px;
+  padding: 1px;
   color: white;
   text-align: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
@@ -220,5 +224,105 @@ code {
   .intro-container, .work-container, .projects-container, .education-container, .achievements-container, .contact-container {
     padding: 5px;
     font-size: 0.9em;
+  }
+}
+
+/* Main container holding the form and image */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.contact-form-container {
+  flex: 1;
+  padding: 50px;
+  max-width: 600px;
+}
+
+.contact-form-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Image side */
+.contact-image-container {
+  flex: 1;
+  height: 100vh;
+  position: relative;
+}
+
+.contact-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+/* Adding a slight fade overlay */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contact-image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form-container, 
+  .contact-image-container {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .contact-form-container {
+    padding: 20px;
   }
 }
