@@ -1,0 +1,160 @@
+:root {
+    --primary-color: #2d67a6;
+    --secondary-color: #ffffff;
+    --accent-color: #f44336;
+    --font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: var(--font-family);
+    height: 100%;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.bg-image {
+    background-image: url('tech2.webp');
+    filter: blur(15px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    position: sticky;
+    padding: auto;
+}
+
+.store-title {
+    font-size: 1.5rem;
+}
+
+.cart-icon {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.main-content {
+    height: 100%;
+    padding: 75px;
+    display: inline-block;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  position: absolute;
+  top: 11%;
+  left: 6%;
+  /* transform: translate(-50%, -50%); */
+  z-index: 2;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: var(--secondary-color);
+}
+
+.product-card p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.product-card button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #26dce3;
+}
+
+.cart-panel {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background-color: var(--secondary-color);
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-items {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item button {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.clear-cart {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+}
